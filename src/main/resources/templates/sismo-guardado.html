@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sismo Guardado</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sismo Guardado</h1>
+        <p th:text="${message}"></p>
+        <p><a th:href="@{/sismo/mapa}">Volver al Mapa</a></p>
+    </div>
+</body>
+</html>

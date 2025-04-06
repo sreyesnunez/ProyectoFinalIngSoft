@@ -54,6 +54,8 @@ $(document).ready(function () {
 
     
    /* @foreach (var mapa in ViewBag.Actualizacion)
+    Se encarga de dibujar un circulo en el mapa dependiendo de la latitud, longitud y radio que se le pase, buscar equivalente de C# para proyecto en Maven.
+
     {
         @:lastLat = @mapa.Latitud;
         @:lastLng = @mapa.Longitud;
@@ -71,14 +73,14 @@ $(document).ready(function () {
     } */
 
 
-// Manejar los eventos de dibujo
-/*
-    $("#Latitud"): This is a jQuery selector Este es un selector en jaquery. El simbolo # indica que esta seleccionando un elemento del HTML con un atributo id con el nombre "Latitud". Esto lo puedes identificar dentro del HTML con <input type="text" value="0" name="Latitud" id="Latitud" required>. 
-    
-    .val(...): Metodo del jQuery usado para establecer o agarrar un valor para los elementos de un formulario ( inputs, select boxes, etc.). En este caso establece un valor del seleccionado "Latitud" en el input field.
+    // Manejar los eventos de dibujo
+    /*
+        $("#Latitud"): This is a jQuery selector Este es un selector en jaquery. El simbolo # indica que esta seleccionando un elemento del HTML con un atributo id con el nombre "Latitud". Esto lo puedes identificar dentro del HTML con <input type="text" value="0" name="Latitud" id="Latitud" required>. 
+        
+        .val(...): Metodo del jQuery usado para establecer o agarrar un valor para los elementos de un formulario ( inputs, select boxes, etc.). En este caso establece un valor del seleccionado "Latitud" en el input field.
 
-    
-*/ 
+        
+    */ 
     
     mymap.on('click', function (e) {
         lat = e.latlng.lat;

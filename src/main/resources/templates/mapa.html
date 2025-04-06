@@ -9,12 +9,14 @@
     <link rel="stylesheet" th:href="@{/plugins/L.Control.MousePosition.css}">
     <link rel="stylesheet" th:href="@{/plugins/leaflet-opencage/src/css/L.Control.OpenCageSearch.css}">
 
-    <script th:src="@{/js/mapa.js}"></script>
+    
     <script th:src="@{/leaflet/leaflet-src.js}"></script>
     <script th:src="@{/jquery/jquery-3.2.0.min.js}"></script>
     <script th:src="@{/plugins/L.Control.MousePosition.js}"></script>
     <script th:src="@{/plugins/leaflet-opencage/src/js/L.Control.OpenCageSearch.js}"></script>
+    <script th:src="@{/js/mapa.js}"></script>
     <style>
+
         #mapdiv {
             height: 100vh;
             width: 100vw;
@@ -38,6 +40,11 @@
                         <input type="text" value="0" name="Longitud" id="Longitud" required="required">
                     </div>
 
+                    <div class="PreguntaMedidaSismo">
+                        <label for="PreguntaEspecifica">Radio del Sismo: (metros)</label>
+                        <input type="numeric" value="0" name="Radio" id="Radio" required>
+                    </div>
+                    <button type="submit">Guardar Mapa</button>
                     <div>
                         <p>.</p>
                         <br /><br /><br /><br /><br /><br /><br /><br><br /><br /><br /><br /><br /><br /><br /><br><br><br /><br /><br /><br />
