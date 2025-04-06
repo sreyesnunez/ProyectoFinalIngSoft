@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    <link rel="stylesheet" th:href="@{/leaflet/leaflet.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"> 
+    <link rel="stylesheet" th:href="@{/plugins/L.Control.MousePosition.css}">
+    <link rel="stylesheet" th:href="@{/plugins/leaflet-opencage/src/css/L.Control.OpenCageSearch.css}">
+
+    <script th:src="@{/js/mapa.js}"></script>
+    <script th:src="@{/leaflet/leaflet-src.js}"></script>
+    <script th:src="@{/jquery/jquery-3.2.0.min.js}"></script>
+    <script th:src="@{/plugins/L.Control.MousePosition.js}"></script>
+    <script th:src="@{/plugins/leaflet-opencage/src/js/L.Control.OpenCageSearch.js}"></script>
+    <style>
+        #mapdiv {
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <form id="formMapa" class="formMapa" method="post" th:action="@{/sismo/guardarSismo}">
+                    <div class="PreguntaMedidaSismo">
+                        <label for="Latitud">Latitud Sismo:</label>
+                        <input type="text" value="0" name="Latitud" id="Latitud" required="required">
+                    </div>
+
+                    <div class="PreguntaMedidaSismo">
+                        <label for="Longitud">Longitud Sismo:</label>
+                        <input type="text" value="0" name="Longitud" id="Longitud" required="required">
+                    </div>
+
+                    <div>
+                        <p>.</p>
+                        <br /><br /><br /><br /><br /><br /><br /><br><br /><br /><br /><br /><br /><br /><br /><br><br><br /><br /><br /><br />
+                        <p>.</p>
+                    </div>
+                </form>
+            </div>
+            <div id="mapdiv" class="col-md-9"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
